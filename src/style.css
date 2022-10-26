@@ -11,7 +11,7 @@
 }
 
 .navbar {
-    @apply py-4 px-6 shadow-md bg-white absolute inline-flex justify-between max-w-sm w-full rounded-lg left-1/2 -translate-x-1/2 top-3 z-10
+    @apply py-4 px-6 shadow-md bg-white absolute inline-flex justify-between items-center max-w-sm w-full rounded-lg left-1/2 -translate-x-1/2 top-3 z-10
 }
 
 .nav-list {
