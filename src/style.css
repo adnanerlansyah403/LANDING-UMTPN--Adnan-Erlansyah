@@ -10,6 +10,14 @@
     @apply px-4 max-w-[550px] m-auto;
 }
 
+.navbar {
+    @apply py-4 px-6 shadow-md bg-white absolute inline-flex justify-between max-w-sm w-full rounded-lg left-1/2 -translate-x-1/2 top-3 z-10
+}
+
+.nav-list {
+    @apply inline-flex gap-4
+}
+
 .h1 {
     @apply font-mono text-4xl font-bold 
 }
@@ -19,7 +27,7 @@
 }
 
 .btn {
-    @apply text-sm py-2.5 px-5 rounded-full
+    @apply text-sm py-2.5 px-5 rounded-full hover:text-gray-300 transition duration-200 ease-in-out
 }
 
 .btn-primary {
@@ -27,5 +35,9 @@
 }
 
 .img-responsive {
-    @apply lg:max-w-lg w-full
+    @apply lg:max-w-xl w-full
+}
+
+.card {
+    @apply p-10 flex-auto md:max-w-xs w-full bg-white rounded-lg shadow-md inline-flex flex-col items-center justify-center text-center
 }

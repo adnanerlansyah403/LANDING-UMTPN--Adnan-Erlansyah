@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -10,8 +10,18 @@
 </head>
 <body class="bg-[#fefefe] w-full">
 
-    <nav>
-
+    <nav class="navbar">
+        <a href="#home">
+            <img class="w-24" src="https://alkademi-development.github.io/cdn/static/assets/img/logos/umptn-dark.png" alt="">
+        </a>
+        <ul class="nav-list">
+            <li>
+                <a href="#about">Tentang Program</a>
+            </li>
+            <li>
+                <a href="#programs">Programs</a>
+            </li>
+        </ul>
     </nav>
 
     <main>
@@ -19,7 +29,7 @@
 
 
             <!-- Landing Page -->
-            <section class="section">
+            <section class="py-32" id="home">
                 <div class="container">
 
                     <h1 class="text-center h1">Ujian Masuk Perusahaan Teknologi Nasional</h1>
@@ -37,8 +47,8 @@
             </section>
 
             <!-- About Page -->
-            <section class="section">
-                <div class="px-8">
+            <section class="section" id="about">
+                <div class="px-16">
 
                     <div class="inline-flex items-center gap-6 flex-wrap">
                         <img class="lg:flex-1 img-responsive" src="https://umptn.alkademi.id/assets/images/i2.png" alt="">
@@ -55,10 +65,24 @@
 
             
             <!-- Programs Page -->
-            <section class="section">
-                <div class="px-4">
+            <section class="section" id="programs">
+                <div class="px-0 lg:px-56">
                     
                     <h1 class="px-10 text-center h1">Seleksi yang sedang berjalan saat ini untuk pengembangan karir kamu</h1>
+                    <p class="paragraph text-center">Programs</p>
+
+                    <div class="mt-6 px-4 md:px-0 inline-flex items-center justify-start md:justify-center gap-6 flex-wrap w-full">
+                        <div class="card">
+                            <img class="w-32 h-32 mb-2" src="https://files.alkademi.id/attachments/program/630f920daf485.jpg" alt="">
+                            <h1 class="font-bold text-xl mb-4">Ujian Masuk Far Capital</h1>
+                            <p class="text-sm font-semibold text-gray-400">
+                                Rekrutmen Software Developer untuk Far Capital Malaysia dengan stack yang di ujikan PHP dan Node.js
+                            </p>
+                            <button class="mt-4 btn btn-primary">
+                                Daftar Sekarang
+                            </button>
+                        </div>
+                    </div>
 
                 
                 </div>
@@ -67,9 +91,32 @@
         </article>
     </main>
 
-    <footer>
+    <a href="#home" class="inline-flex items-center justify-center fixed bottom-5 right-5 bg-[#747ed1] text-white text-lg w-10 h-10 rounded-full hover:text-gray-300 transition duration-200 ease-in-out" data-button-top>
+        <ion-icon name="arrow-up-outline"></ion-icon>
+    </a>
+
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+    <script type="text/javascript">
+
+        const topBtn = document.querySelector('[data-button-top]');
         
-    </footer>
-    
+        if(window.scrollY > 100) {
+            topBtn.classList.remove('hidden');
+        } else {
+            topBtn.classList.add('hidden');
+        }
+
+        window.addEventListener('scroll', function() {
+            if(window.scrollY > 100) {
+                topBtn.classList.remove('hidden');
+            } else {
+                topBtn.classList.add('hidden');
+            }
+        });
+
+    </script>
+
 </body>
 </html>
